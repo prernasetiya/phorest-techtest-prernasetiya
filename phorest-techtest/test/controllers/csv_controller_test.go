@@ -15,7 +15,7 @@ import (
     "phorest-techtest/internal/routes"
 )
 
-func setupTestDatabase() {
+func setupTestDB() {
     // Initialize the test database
     database.ConnectDatabase()
 
@@ -31,7 +31,7 @@ func TestImportCSV(t *testing.T) {
     router := routes.SetupRouter()
 
     // Set up the test database
-    setupTestDatabase()
+    setupTestDB()
 
     // Define test cases
     tests := []struct {

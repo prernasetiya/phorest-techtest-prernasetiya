@@ -11,5 +11,8 @@ func SetupRouter() *gin.Engine {
     // CSV import route : Imports , parses and saves CSV data to the database
     r.POST("/import", controllers.ImportCSV)
 
+	// Get top X non-banned clients with most loyalty points since date Y
+	r.GET("/top-clients", controllers.GetTopClients)
+
     return r
 }
