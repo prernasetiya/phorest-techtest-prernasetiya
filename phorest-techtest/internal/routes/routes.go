@@ -14,5 +14,15 @@ func SetupRouter() *gin.Engine {
 	// Get top X non-banned clients with most loyalty points since date Y
 	r.GET("/top-clients", controllers.GetTopClients)
 
+
+    // Update a client by ID
+    r.PUT("/clients/:id", controllers.UpdateClient)  
+
+    // Fetch a singel client by ID 
+    r.GET("/clients/:id", controllers.GetClientByID)
+
+    // Delete a client by ID
+    r.DELETE("/clients/:id", controllers.DeleteClient) 
+
     return r
 }
